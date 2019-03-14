@@ -1,0 +1,90 @@
+<div class="jumbotron animated fadeIn slow text-center">
+    <h1>{{ punts }} punts</h1>
+    <small>{{ tirPerfecte }}</small>
+    <p>Diana {{ dianaActual }} de {{ totalDianes }}</p>
+    <p>{{ mitjanaPunts }} punts de mitjana per diana</p>
+</div>
+
+<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
+
+    <div class="well well-sm text-left">
+
+        <h3>Fletxa 1</h3>
+
+        <label class="btn btn-success mr-4">
+        <input  type="radio" 
+                name="fletxa1" 
+                id="fletxa1" 
+                [(ngModel)]="diana.fletxa1"
+                value="11">
+        <span class="glyphicon glyphicon-ok">11</span>
+        </label>
+
+        <label class="btn btn-primary mr-2">
+        <input type="radio" name="fletxa1" id="fletxa1" [(ngModel)]="diana.fletxa1" value="10">
+        <span class="glyphicon glyphicon-ok">10</span>
+        </label>
+
+        <label class="btn btn-info mr-2">
+        <input type="radio" name="fletxa1" id="fletxa1" [(ngModel)]="diana.fletxa1" value="8">
+        <span class="glyphicon glyphicon-ok">8</span>
+        </label>
+
+        <label class="btn btn-warning mr-2">
+        <input type="radio" name="fletxa1" id="fletxa1" [(ngModel)]="diana.fletxa1" value="5">
+        <span class="glyphicon glyphicon-ok">5</span>
+        </label>
+
+        <label class="btn btn-danger mr-2">
+        <input type="radio" name="fletxa1" id="fletxa1" [(ngModel)]="diana.fletxa1" value="0">
+        <span class="glyphicon glyphicon-ok">0</span>
+        </label>
+
+
+    </div>
+
+    <hr>
+    <div class="well well-sm text-left">
+
+        <h3>Fletxa 2</h3>
+
+        <label class="btn btn-success mr-4">
+        <input type="radio" name="fletxa2" id="fletxa2" [(ngModel)]="diana.fletxa2" value="11">
+        <span class="glyphicon glyphicon-ok">11</span>
+        </label>
+
+        <label class="btn btn-primary mr-2">
+        <input type="radio" name="fletxa2" id="fletxa2" [(ngModel)]="diana.fletxa2" value="10">
+        <span class="glyphicon glyphicon-ok">10</span>
+        </label>
+
+        <label class="btn btn-info mr-2">
+        <input type="radio" name="fletxa2" id="fletxa2" [(ngModel)]="diana.fletxa2" value="8">
+        <span class="glyphicon glyphicon-ok">8</span>
+        </label>
+
+        <label class="btn btn-warning mr-2">
+        <input type="radio" name="fletxa2" id="fletxa2" [(ngModel)]="diana.fletxa2" value="5">
+        <span class="glyphicon glyphicon-ok">5</span>
+        </label>
+
+        <label class="btn btn-danger mr-2">
+        <input type="radio" name="fletxa2" id="fletxa2" [(ngModel)]="diana.fletxa2" value="0">
+        <span class="glyphicon glyphicon-ok">0</span>
+        </label>
+
+    </div>
+
+
+
+
+
+    <div class="form-group row ">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary">
+        Propera diana
+      </button>
+        </div>
+    </div>
+</form>

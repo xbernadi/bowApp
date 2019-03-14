@@ -1,0 +1,43 @@
+<h4>Nova <small>tirada</small></h4>
+<hr>
+<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
+
+    <div>
+
+        <div class="form-group row">
+            
+            <label class="col-2 col-form-label">Camp</label>
+            <div class="col-8">
+                <select [(ngModel)]="tirada_camp" class="form-control" name="camp" required>
+                    <option *ngFor="let k of camps | keys; let i = index" value="{{ camps[k].id }}">
+                    {{ camps[k].club }} - {{ camps[k].circuit }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Arc</label>
+            <div class="col-8">
+
+                <select [(ngModel)]="tirada_arc" class="form-control" name="categoria" required>
+                    <option *ngFor="let z of categories | keys; let x = index" value="{{ x + 1}}">
+                    {{ categories[z].federacio }} - {{ categories[z].categoria }}</option>
+                </select>
+
+
+                <!-- <input class="form-control" type="text" [(ngModel)]="tirada" name="arc"> -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary">
+        Iniciar
+      </button>
+        </div>
+    </div>
+
+</form>

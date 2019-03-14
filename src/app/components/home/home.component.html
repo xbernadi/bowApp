@@ -1,0 +1,29 @@
+<div class=" animated fadeIn fast">
+  <h2 class="display-4">Benvingut</h2> 
+
+  <ul class="navbar-nav mr-auto">
+
+      <span class="navbar-text">
+          <button (click)="login()"
+                  *ngIf="!auth.isAuthenticated()"
+                  type="button" 
+                  class="btn btn-outline-primary btn-sm">Entrar</button>
+        </span>
+
+    <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated()">
+       <a class="nav-link" href="#/perfil"><!-- <i class='fa fa-user-circle'></i> --> Perfil</a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated()">
+        <a class="nav-link" href="#/historial">Historial</a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="#/new">Nova tirada </a>
+    </li>
+    
+  </ul>
+  
+</div>
+
+

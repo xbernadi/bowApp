@@ -1,0 +1,21 @@
+<!-- <h2>Històric de tirades</h2>
+<hr> -->
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Camp</th>
+      <th scope="col">Data</th>
+      <th scope="col">Punts</th>
+      <th scope="col">Mitja </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let k of tirada | keys; let i = index">
+      <td>({{ tirada[k].club_abreviat }}) {{ tirada[k].camp }}</td>
+      <td>{{ tirada[k].data }}</td>
+      <td>{{ tirada[k].punts }} ({{ tirada[k].plens }})</td>
+      <td>{{ tirada[k].mitja | number: '1.0-1' }}</td>
+    </tr>
+</tbody>
+</table>    

@@ -1,0 +1,18 @@
+<div class="row" *ngFor="let k of camps | keys; let i = index">
+    <div class="col-md-4">
+        <!-- <img class="card-img-top" src="{{ camp.img }}" alt="{{ camp.nom }}"> -->
+        <a [routerLink]="['/camps']" class="btn btn-outline-danger btn-block">Tornar</a>
+    </div>
+
+
+    <div class="col-md-8">
+        <h3 class="card-title">{{ camps[k].circuit }}</h3>
+        <hr>
+        <p class="card-text">{{ camps[k].club }}</p>
+          <p class="card-text">{{ camps[k].poblacio }}</p>
+        <p class="card-text"><a href="{{ camps[k].url }}" target="_blank">{{ camps[k].url }}</a></p>
+
+        <!-- <p class="card-text" *ngFor="let t of temperatura | keys">Temperatura actual: {{ temperatura[t] }}</p> -->
+    </div>
+
+</div>
